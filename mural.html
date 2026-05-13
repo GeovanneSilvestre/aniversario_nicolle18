@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mural de Recados | Nicolle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="mural">
+  <header class="hero hero--simple">
+    <div class="topbar">
+      <a href="index.html" class="brand" style="text-decoration: none;">
+      </a>
+      <button class="topnav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="presentes.html">Lista de Presentes</a>
+        <a href="confirmar.html">Confirmar presença</a>
+        <a href="mural.html" class="active">Mural de recados</a>
+        <a href="aniversario.html">Aniversário</a>
+      </nav>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy hero-copy--simple">
+        <p class="eyebrow">Compartilhe seu carinho</p>
+        <h1>Deixe um recado para a Nicolle</h1>
+        <p class="hero__text">Escreva uma mensagem especial no mural e faça parte da festa com um toque gentil e elegante.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="mural-layout">
+      <article class="mural-card mural-card--form">
+        <div class="mural-card__intro">
+          <p class="eyebrow">Deixe seu recado</p>
+          <h2>Um espaço para carinho</h2>
+          <p>Conte uma lembrança bonita, uma mensagem de amor ou um desejo para os 18 anos da Nicolle.</p>
+        </div>
+        <form id="messageForm" class="mural-form">
+          <label>
+            Nome
+            <input id="messageName" type="text" placeholder="Seu nome" required />
+          </label>
+          <label>
+            Mensagem
+            <textarea id="messageText" rows="6" placeholder="Escreva seu recado aqui" required></textarea>
+          </label>
+          <button class="action-button" type="submit">Enviar recado</button>
+        </form>
+      </article>
+
+      <div class="mural-grid" id="muralGrid"></div>
+    </section>
+  </main>
+
+  <template id="mural-card-template">
+    <article class="mural-card">
+      <div class="mural-card__header">
+        <div class="mural-card__avatar">💌</div>
+        <div>
+          <strong class="mural-card__name"></strong>
+          <span class="mural-card__time"></span>
+        </div>
+      </div>
+      <p class="mural-card__text"></p>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

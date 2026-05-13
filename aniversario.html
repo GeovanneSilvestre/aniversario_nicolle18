@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniversário | Nicolle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="aniversario">
+  <header class="hero hero--simple">
+    <div class="topbar">
+      <a href="index.html" class="brand" style="text-decoration: none;">      </a>
+      <button class="topnav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="presentes.html">Lista de Presentes</a>
+        <a href="mural.html">Mural de recados</a>
+        <a href="aniversario.html" class="active">Local</a>
+      </nav>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy hero-copy--simple">
+        <p class="eyebrow">Evento</p>
+        <h1>Local da Festa</h1>
+        <p class="hero__text">A festa da Nicolle é um encontro muito importante para a família e amigos. Ela receberá todos com muito agrado se levarem presente; senão,…</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="event-frame">
+      <div class="map-frame" aria-label="Mapa do local do evento">
+        <iframe src="https://maps.google.com/maps?q=Condom%C3%ADnio%20Paradise%20Sunrise%20Av.%20Pedro%20Teixeira%2C%201402%20ap%201403%20Chapada%20Manaus%20AM&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      </div>
+
+      <article class="event-card">
+        <p class="eyebrow">Detalhes do evento</p>
+        <h2>Aniversário</h2>
+        <div class="event-card__row">
+          <span>Data</span>
+          <strong>27 de junho de 2026 — 18h00</strong>
+        </div>
+        <div class="event-card__row">
+          <span>Local</span>
+          <strong>Condomínio Paradise Sunrise · Av. Pedro Teixeira, 1402 - ap 1403 - Chapada, Manaus - AM, 69040-000</strong>
+        </div>
+        <div class="event-card__buttons">
+          <a class="action-button" href="https://www.google.com/maps/search/?api=1&query=Condom%C3%ADnio+Paradise+Sunrise+Av.+Pedro+Teixeira,+1402+ap+1403+Chapada+Manaus+AM" target="_blank" rel="noreferrer noopener">Abrir no Maps</a>
+          <a class="action-button action-button--secondary" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Anivers%C3%A1rio+da+Nicolle&dates=20260627T210000Z/20260627T230000Z&details=Venha+celebrar+no+Condom%C3%ADnio+Paradise+Sunrise.&location=Condom%C3%ADnio+Paradise+Sunrise+Av.+Pedro+Teixeira,+1402+ap+1403+Chapada+Manaus+AM" target="_blank" rel="noreferrer noopener">Adicionar à agenda</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

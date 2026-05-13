@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmar Presença | Nicolle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="confirmar">
+  <header class="hero hero--simple">
+    <div class="topbar">
+      <a href="index.html" class="brand" style="text-decoration: none;">
+      </a>
+      <button class="topnav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="presentes.html">Lista de Presentes</a>
+        <a href="confirmar.html" class="active">Confirmar presença</a>
+        <a href="mural.html">Mural de recados</a>
+        <a href="aniversario.html">Local</a>
+      </nav>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy hero-copy--simple">
+        <p class="eyebrow">Lista de Convidados</p>
+        <h1>Confirme sua presença</h1>
+        <p class="hero__text">Coloque seu nome na lista abaixo para confirmar que você estará presente na festa da Nicolle.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="mural-layout">
+      <article class="mural-card mural-card--form">
+        <div class="mural-card__intro">
+          <p class="eyebrow">Presença</p>
+          <h2>Eu vou!</h2>
+          <p>Digite seu nome completo para adicionar à nossa lista oficial de confirmações.</p>
+        </div>
+        <form id="confirmForm" class="mural-form">
+          <label>
+            Nome completo
+            <input id="confirmName" type="text" placeholder="Digite seu nome" required />
+          </label>
+          <button class="action-button" type="submit">Confirmar presença</button>
+        </form>
+      </article>
+
+      <div class="confirm-board">
+        <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: #203046; border-bottom: 1px solid #e4eff8; padding-bottom: 1rem;">Lista de Confirmados</h3>
+        <div class="confirm-grid" id="confirmGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <template id="confirm-card-template">
+    <div class="confirm-item">
+      <span style="color: #5c7ba5; font-weight: bold;">✓</span>
+      <strong class="confirm-card__name"></strong>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

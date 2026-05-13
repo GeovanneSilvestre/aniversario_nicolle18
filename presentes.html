@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Presentes | Nicolle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="presentes">
+  <header class="hero hero--simple">
+    <div class="topbar">
+      <a href="index.html" class="brand" style="text-decoration: none;">
+      </a>
+      <button class="topnav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="presentes.html" class="active">Lista de Presentes</a>
+        <a href="confirmar.html">Confirmar presença</a>
+        <a href="mural.html">Mural de recados</a>
+        <a href="aniversario.html">Aniversário</a>
+      </nav>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy hero-copy--simple">
+        <p class="eyebrow">Presentes</p>
+        <h1>Seleção especial</h1>
+        <p class="hero__text">Encontre os presentes escolhidos pela Nicolle para celebrar os 18 anos.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="gift-list" id="giftList">
+      <h2>Presentes sugeridos</h2>
+      <div class="gift-grid" id="giftGrid"></div>
+    </section>
+  </main>
+
+  <template id="gift-card-template">
+    <article class="gift-card">
+      <div class="gift-card__image"></div>
+      <div class="gift-card__body">
+        <h3 class="gift-card__title"></h3>
+        <p class="gift-card__description"></p>
+        <span class="gift-card__price"></span>
+        <a class="gift-card__buy" target="_blank" rel="noreferrer noopener">Comprar</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
