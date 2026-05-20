@@ -1,12 +1,12 @@
 :root {
   color-scheme: light;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', sans-serif;
   color: #000000;
 }
 
 body {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -391,7 +391,7 @@ body.presentes .hero-grid {
 }
 
 
-.hero-copy {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -407,7 +407,6 @@ body.presentes .hero-grid {
 
 h1 {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 700;
   line-height: 1.02;
@@ -416,7 +415,6 @@ h1 {
 }
 
 h2 {
-  font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
   color: #000000;
 }
@@ -444,7 +442,6 @@ h2 {
 
 .event-info__label {
   display: block;
-  font-family: 'Cormorant Garamond', serif;
   font-size: 0.82rem;
   opacity: 0.85;
   margin-bottom: 0.45rem;
@@ -654,42 +651,6 @@ h2 {
   color: #4f6a8b;
   font-size: 1rem;
   line-height: 1.8;
-}
-
-.mural-card__header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.mural-card__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  background: #e4eff8;
-  font-size: 1.5rem;
-}
-
-.mural-card__name {
-  display: block;
-  font-size: 1rem;
-  color: #24303f;
-}
-
-.mural-card__time {
-  display: block;
-  margin-top: 0.2rem;
-  color: #6f7e94;
-  font-size: 0.88rem;
-}
-
-.mural-card__text {
-  margin: 0;
-  line-height: 1.85;
-  color: #475a70;
 }
 
 /* --- Quadro Branco de Confirmações --- */

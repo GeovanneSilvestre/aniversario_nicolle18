@@ -72,30 +72,6 @@ function hasGiftGrid() {
   return Boolean(giftGrid && template);
 }
 
-function updateCountdown() {
-  // Evento começa dia 27 de junho de 2026 às 18:00 no fuso horário de Manaus (GMT-4)
-  const eventDate = new Date('2026-06-27T18:00:00-04:00');
-  const now = new Date();
-  const diffMs = eventDate - now;
-  const countdownRemaining = document.getElementById('countdownRemaining');
-
-  if (!countdownRemaining) {
-    return;
-  }
-
-  if (diffMs <= 0) {
-    countdownRemaining.textContent = 'Já chegou!';
-    return;
-  }
-
-  const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
-  const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
-  const pad = (value) => String(value).padStart(2, '0');
-
-  countdownRemaining.textContent = `${totalHours}:${pad(minutes)}:${pad(seconds)}`;
-}
-
 function renderGifts(category) {
   if (!hasGiftGrid()) return;
   const gifts = giftData[category];
@@ -124,67 +100,6 @@ function renderGifts(category) {
     }
 
     giftGrid.appendChild(card);
-  });
-}
-
-const muralMessageForm = document.getElementById('messageForm');
-const muralGrid = document.getElementById('muralGrid');
-const messageCardTemplate = document.getElementById('mural-card-template');
-
-const messageData = [];
-
-function renderMessages() {
-  if (!muralGrid || !messageCardTemplate) return;
-
-  muralGrid.innerHTML = '';
-  const messages = messageData.slice().reverse();
-
-  if (messages.length === 0) {
-    const emptyMessage = document.createElement('div');
-    emptyMessage.className = 'mural-empty';
-    emptyMessage.textContent = 'Nenhum recado ainda. Escreva seu nome e mensagem para aparecer no histórico ao lado.';
-    muralGrid.appendChild(emptyMessage);
-    return;
-  }
-
-  messages.forEach((message) => {
-    const node = messageCardTemplate.content.cloneNode(true);
-    const card = node.querySelector('.mural-card');
-    const name = node.querySelector('.mural-card__name');
-    const time = node.querySelector('.mural-card__time');
-    const text = node.querySelector('.mural-card__text');
-
-    name.textContent = message.name;
-    time.textContent = message.time;
-    text.textContent = message.text;
-
-    muralGrid.appendChild(card);
-  });
-}
-
-function setupMessageForm() {
-  if (!muralMessageForm) return;
-
-  muralMessageForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const nameInput = document.getElementById('messageName');
-    const textInput = document.getElementById('messageText');
-    const name = nameInput.value.trim();
-    const text = textInput.value.trim();
-
-    if (!name || !text) {
-      return;
-    }
-
-    messageData.push({
-      name,
-      text,
-      time: 'Agora mesmo'
-    });
-
-    renderMessages();
-    muralMessageForm.reset();
   });
 }
 
@@ -405,13 +320,9 @@ function setupConfirmForm() {
   });
 }
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
 if (hasGiftGrid()) {
   renderGifts('beleza');
 }
-renderMessages();
-setupMessageForm();
 setupMobileMenu();
 carregarConfirmacoes();
 setupConfirmForm();
